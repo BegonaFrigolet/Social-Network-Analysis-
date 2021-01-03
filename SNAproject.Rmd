@@ -1,0 +1,126 @@
+---
+title: "SNA_project"
+output: html_document
+---
+
+## R Markdown
+
+We are applying the basic functions of the Igraph using the Bay Area bike data.
+
+
+# Loading data
+
+In this section, the goal is loading the datasets given, building the graph and analyzing basics metrics. 
+
+Describe the values provided by summary function on the graph object.
+
+```{r}
+
+library(igraph)
+library(data.table)
+
+df_bike_edges = fread('/Users/mohamedkhanafer/Desktop/SNA/Ours/edges_new.csv',  header=T)
+df_bike_nodes = fread('/Users/mohamedkhanafer/Desktop/SNA/Ours/201508_station_data.csv',  header = T)
+
+
+bike_e_g = graph_from_data_frame(d=df_bike_edges, vertices=df_bike_nodes, directed=T) 
+summary(bike_e_g)
+```
+
+#Degree distribution
+
+###Bikes as undirected
+```{r}
+
+degall <- degree(bike_e_g, mode="all")
+hist(degall, main="Histogram of node degree")
+
+mean(degall)
+
+sd(degall)
+```
+
+
+### In degrees
+```{r}
+
+degi<-degree(bike_e_g, mode="in")
+hist(degi, main="Histogram of node degree")
+
+mean(degi)
+
+sd(degi)
+```
+
+
+
+### Out degrees
+```{r}
+dego<-degree(bike_e_g, mode="out")
+hist(dego, main="Histogram of node degree")
+
+mean(dego)
+
+sd(dego)
+```
+
+###Network Diameter and Average Path Length
+```{r}
+diameter(bike_e_g,directed = T)
+
+mean_distance(bike_e_g,directed = T)
+```
+
+###Clusterting coefficient
+```{r}
+transitivity(bike_e_g,type=c("global"),weights=NULL)
+```
+
+
+#Node importance: Centrality measures
+
+```{r}
+degall <- degree(bike_e_g, mode="all")
+bet.a <-betweenness(bike_e_g)
+close.a <-closeness(bike_e_g)
+
+centrality.stations <- cbind(degall, bet.a, close.a)
+centrality.stations <- as.data.frame(centrality.stations)
+centrality.stations <- setDT(centrality.stations, keep.rownames = TRUE)[]
+centrality.stations <- as.data.table(centrality.stations)
+centrality.stations$landmark <- df_actor_nodes$landmark
+head(centrality.stations)
+```
+
+*How do you explain the high degree of the top-20 list? *
+```{r}
+centrality.stations[order(centrality.stations$degall, decreasing = T),][1:20]
+```
+
+*Is this list similar to the one obtained for degree centrality? Why? How do you explain the high betweenness of the top-20 list?*
+```{r}
+centrality.stations[order(centrality.stations$bet.a, decreasing = T),][1:20]
+```
+
+```{r}
+centrality.stations[order(centrality.stations$close.a, decreasing = T),][1:20]
+```
+
+# Get main component
+```{r}
+a_cc = components(bike_e_g, mode="strong")
+print(a_cc$csize)
+BigComp = which.max(a_cc$csize)
+
+main_actors = induced_subgraph(bike_e_g, 
+    which(a_cc$membership == BigComp))
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
