@@ -19,6 +19,9 @@ For our analysis, we combined outputs from various tools. Namely:
 - Gephi for the visualizations of our networks;
 - FlowingBlue for maping the networks on mapped backgrounds.
 
+## To review the Final Materials:
+- [R Markdown](https://github.com/BegonaFrigolet/Social-Network-Analysis-/blob/main/SNAproject.Rmd)
+- [HTML](https://github.com/BegonaFrigolet/Social-Network-Analysis-/blob/main/A%20look%20at%20Madrid%E2%80%99s%20Bike%20Sharing%20System%20with%20Comparaisons%20to%20New%20York%20and%20Montreal%E2%80%99s%20systems%20HTML.html)
 
 ## About the main ressources consulted
 Throughout this analysis, we consulted many ressources and accumulated some inspiration from here and there. The main ones are the following:
@@ -66,12 +69,12 @@ We downloaded the data from https://www.citibikenyc.com/system-data, which provi
 Data for the trips:
 In the same way as Madrid and Montreal, the transformations we did were mainly to get a Source and Target stations with weights that represented the trips between the stations. We provide both these processed files in the data folder.
 
-## 5. Starting with some graphs to get an intuition
+## Starting with some graphs to get an intuition
 After testing various plots in R, Gephi, and Flowmap, we concluded that the best way to visualize the networks would be to map the in, out, and overall the degrees on the same graph using Flowmap. These were the graph giving us the best insights and availability for comparison. We later on in the next section show the computations of these and other central measures.
 
 To be able to compare the graphs and reduce bias, we used the month of June 2019 for each city.
 
-5.1 The maps of the degrees for the 3 cities
+The maps of the degrees for the 3 cities
 The datasets used were built in Python and we uploaded them to Flowmap.
 
 The links to the interactive maps are:
