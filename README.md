@@ -85,5 +85,25 @@ New York:https://flowmap.blue/1NKYn1fEw0qe7biOgdMlzXXGDjhpeSpLd51J8DhXFeQY?v=0.0
 
 Montreal:https://flowmap.blue/1APu7yHTPZg6j0c8ggbj09ViGseqnvN-TDUEO31WVIqA?v=45.509453,-73.602573,11.02,0,0&a=0&b=1&bo=75&c=0&d=0&lt=1&lfm=ALL&col=DarkMint&f=50 
 
+![Map of three cities](https://github.com/BegonaFrigolet/Social-Network-Analysis-/blob/main/1.%20Graphs/Captura%20de%20Pantalla%202021-01-02%20a%20la(s)%2019.20.11.png)
 
+The first insight, we believe, from the graph is the obvious central focus point for Montreal and New York while Madrid’s important nodes are more widespread with no clear center. These attributes will be further highlighted in the upcoming analysis.
 
+### Madrid over the years
+How has Madrid’s network evolved over the years? We here plotted the data of the 3 networks over the years to see the evolution of the network and maybe get an insight from it.
+
+![Madrid over the years](https://github.com/BegonaFrigolet/Social-Network-Analysis-/blob/main/1.%20Graphs/Captura%20de%20Pantalla%202021-01-02%20a%20la(s)%2019.20.27.png)
+
+Already from the data, we noticed a decrease in the edges for Madrid. And this is clearly evident from the graphs of the network. We have a reduced amount of weight from year to year (again here we are using for each year the data for the months of June 2017).
+
+### A comparison to Montreal over the years
+
+To see if this pattern is similar or different in other already established systems, we also looked at the change of the network for Montreal from June 2016 to June 2019.
+
+![Montreal over the years](https://github.com/BegonaFrigolet/Social-Network-Analysis-/blob/main/1.%20Graphs/Captura%20de%20Pantalla%202021-01-02%20a%20la(s)%2019.20.34.png)
+
+We can clearly see an opposite trend here with increasing weights in the edges of the graph. And another interesting trend is the expansion of the network to further locations.
+
+### Concluding remarks
+
+Through this Social Network Analysis, we were able to clearly highlight the differences between the bike sharing systems of more established cities like New York and Montreal as compared to Madrid. The insights here could be beneficial for Madrid to improve its system and tackle the decline in use we’ve highlighted over the years.
