@@ -20,8 +20,9 @@ For our analysis, we combined outputs from various tools. Namely:
 - FlowingBlue for maping the networks on mapped backgrounds.
 
 ## To review the Final Materials:
+- [Download HTML](https://github.com/BegonaFrigolet/Social-Network-Analysis-/blob/main/A%20look%20at%20Madrid%E2%80%99s%20Bike%20Sharing%20System%20with%20Comparaisons%20to%20New%20York%20and%20Montreal%E2%80%99s%20systems%20HTML.html)
+
 - [R Markdown](https://github.com/BegonaFrigolet/Social-Network-Analysis-/blob/main/SNAproject.Rmd)
-- [HTML](https://github.com/BegonaFrigolet/Social-Network-Analysis-/blob/main/A%20look%20at%20Madrid%E2%80%99s%20Bike%20Sharing%20System%20with%20Comparaisons%20to%20New%20York%20and%20Montreal%E2%80%99s%20systems%20HTML.html)
 
 ## About the main ressources consulted
 Throughout this analysis, we consulted many ressources and accumulated some inspiration from here and there. The main ones are the following:
